@@ -1,0 +1,16 @@
+https://stackoverflow.com/questions/56721721/npx-create-nuxt-app-project-name-not-working
+
+
+
+You have a space in your Windows username. This is a problem with NPX.
+
+This is the path that NPM sees (which is right)
+
+Right path
+This is the path that NPX sees (which is wrong)
+
+enter image description here
+You can fix it by changing your NPM-Cache to another directory (without a space in the path):
+
+npm config set cache C:\your\new\path\npm-cache --global
+Source: https://github.com/zkat/npx/issues/146#issuecomment-384016791
